@@ -49,11 +49,11 @@ This project requires a Java Runtime version 11 or later.
 | [Sonatype OSS Index Maven Plugin][sonatype-oss-index-maven-plugin]                  | Checking Dependencies Vulnerability                    | ASL2                          |
 | [Versions Maven Plugin][versions-maven-plugin]                                      | Checking if dependencies updates are available         | Apache License 2.0            |
 
-# @formatter:off
+<!--@formatter:off -->
 [maven-enforcer-plugin]: http://maven.apache.org/enforcer/maven-enforcer-plugin/
 [oft-maven-plugin]: https://github.com/itsallcode/openfasttrace-maven-plugin
 [project-keeper-maven-plugin]: https://github.com/exasol/project-keeper-maven-plugin
 [sonatype-oss-index-maven-plugin]: https://sonatype.github.io/ossindex-maven/maven-plugin/
 [versions-maven-plugin]: https://www.mojohaus.org/versions-maven-plugin/
 [exasol-testcontainers]: https://github.com/exasol/exasol-testcontainers
-# @formatter:on
+<!-- @formatter:on -->
