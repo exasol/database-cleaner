@@ -6,7 +6,7 @@
     <artifactId>database-cleaner</artifactId>
     <version>1.0.0</version>
     <name>database-cleaner</name>
-    <description>Tool that deletes all object in an Exasol database
+    <description>Tool that deletes all objects in an Exasol database
     </description>
     <url>https://github.com/exasol/database-cleaner</url>
     <properties>
