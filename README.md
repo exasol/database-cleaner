@@ -1,6 +1,6 @@
 # Exasol Database Cleaner
 
-[![Build Status](https://api.travis-ci.com/exasol/database-cleaner.svg?branch=master)](https://travis-ci.org/exasol/database-cleaner)
+[![Build Status](https://travis-ci.com/exasol/database-cleaner.svg?branch=main)](https://travis-ci.com/exasol/database-cleaner)
 [![Maven Central](https://img.shields.io/maven-central/v/com.exasol/database-cleaner)](https://search.maven.org/artifact/com.exasol/database-cleaner)
 
 This Java library allows you to delete all objects from an Exasol database. You can use it for example to isolate your tests.
