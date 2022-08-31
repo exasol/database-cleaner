@@ -1,4 +1,4 @@
-# database-cleaner 1.0.2, released 2022-08-??
+# database-cleaner 1.0.2, released 2022-08-31
 
 Code name: Dependency updates
 
