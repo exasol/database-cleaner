@@ -1,7 +1,7 @@
 # Exasol Database Cleaner
 
 [![Build Status](https://github.com/exasol/database-cleaner/actions/workflows/ci-build.yml/badge.svg)](https://github.com/exasol/database-cleaner/actions/workflows/ci-build.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/com.exasol/database-cleaner)](https://search.maven.org/artifact/com.exasol/database-cleaner)
+[![Maven Central – database-cleaner](https://img.shields.io/maven-central/v/com.exasol/database-cleaner)](https://search.maven.org/artifact/com.exasol/database-cleaner)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=com.exasol%3Adatabase-cleaner&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.exasol%3Adatabase-cleaner)
 

@@ -2,3 +2,4 @@ error-tags:
   CWA:
     packages:
       - com.exasol.dbcleaner
+    highest-index: 1

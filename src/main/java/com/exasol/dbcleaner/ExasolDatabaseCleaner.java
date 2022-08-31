@@ -34,7 +34,7 @@ public class ExasolDatabaseCleaner {
 
     private void purgeConnections() throws SQLException {
         try (final ResultSet resultSet = this.statement
-                .executeQuery("SELECT CONNECTION_NAME FROM EXA_ALL_CONNECTIONS;")) {
+                .executeQuery("SELECT CONNECTION_NAME FROM EXA_ALL_CONNECTIONS")) {
             while (resultSet.next()) {
                 final String connectionName = resultSet.getString("CONNECTION_NAME");
                 final String dropCommand = "DROP CONNECTION IF EXISTS \"" + connectionName + "\"";
@@ -46,7 +46,7 @@ public class ExasolDatabaseCleaner {
 
     private void purgeObjects() throws SQLException {
         try (final ResultSet resultSet = this.statement.executeQuery(
-                "SELECT OBJECT_NAME, OBJECT_TYPE, OBJECT_IS_VIRTUAL FROM SYS.EXA_ALL_OBJECTS WHERE ROOT_NAME IS NULL ORDER BY CREATED DESC;")) {
+                "SELECT OBJECT_NAME, OBJECT_TYPE, OBJECT_IS_VIRTUAL FROM SYS.EXA_ALL_OBJECTS WHERE ROOT_NAME IS NULL ORDER BY CREATED DESC")) {
             while (resultSet.next()) {
                 final String objectName = resultSet.getString("OBJECT_NAME");
                 final String objectType = (resultSet.getBoolean("OBJECT_IS_VIRTUAL") ? "VIRTUAL " : "")
@@ -74,7 +74,7 @@ public class ExasolDatabaseCleaner {
     }
 
     private void purgeUsers() throws SQLException {
-        try (final ResultSet resultSet = this.statement.executeQuery("SELECT USER_NAME FROM EXA_ALL_USERS;")) {
+        try (final ResultSet resultSet = this.statement.executeQuery("SELECT USER_NAME FROM EXA_ALL_USERS")) {
             while (resultSet.next()) {
                 final String userName = resultSet.getString("USER_NAME");
                 if (!userName.equals("SYS")) {
@@ -88,7 +88,7 @@ public class ExasolDatabaseCleaner {
 
     private void purgeRoles() throws SQLException {
         final List<String> builtInRoles = List.of("PUBLIC", "DBA");
-        try (final ResultSet resultSet = this.statement.executeQuery("SELECT ROLE_NAME FROM EXA_ALL_ROLES;")) {
+        try (final ResultSet resultSet = this.statement.executeQuery("SELECT ROLE_NAME FROM EXA_ALL_ROLES")) {
             while (resultSet.next()) {
                 final String roleName = resultSet.getString("ROLE_NAME");
                 if (!builtInRoles.contains(roleName)) {
