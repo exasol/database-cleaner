@@ -1,5 +1,5 @@
 error-tags:
-  CWA:
+  DBC:
     packages:
       - com.exasol.dbcleaner
     highest-index: 1
