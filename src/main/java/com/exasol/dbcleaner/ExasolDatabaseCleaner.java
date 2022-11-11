@@ -37,7 +37,7 @@ public class ExasolDatabaseCleaner {
 
     /**
      * Drop all database objects request in {@link CleanRequest}.
-     * @param cleanRequest
+     * @param cleanRequest instance of {@link CleanRequest} the defines which objects to drop
      * @throws SQLException if failed to delete an object
      */
     public void cleanDatabase(final CleanRequest cleanRequest) throws SQLException {
