@@ -1,10 +1,9 @@
 package com.exasol.dbcleaner;
 
-import java.sql.*;
-import java.util.EnumSet;
-import java.util.HashSet;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Logger;
 
 /**
@@ -16,7 +15,7 @@ public class ExasolDatabaseCleaner {
 
     /**
      * Create a new instance of {@link ExasolDatabaseCleaner}.
-     * 
+     *
      * @param statement SQL statement to the Exasol database
      */
     public ExasolDatabaseCleaner(final Statement statement) {
@@ -37,11 +36,12 @@ public class ExasolDatabaseCleaner {
 
     /**
      * Drop all database objects request in {@link CleanRequest}.
+     *
      * @param cleanRequest instance of {@link CleanRequest} the defines which objects to drop
      * @throws SQLException if failed to delete an object
      */
     public void cleanDatabase(final CleanRequest cleanRequest) throws SQLException {
-        if(cleanRequest.isCleanAll()) {
+        if (cleanRequest.isCleanAll()) {
             cleanDatabase();
         } else {
             cleanDatabaseAsRequested(cleanRequest);
@@ -49,16 +49,16 @@ public class ExasolDatabaseCleaner {
     }
 
     private void cleanDatabaseAsRequested(final CleanRequest cleanRequest) throws SQLException {
-        if(cleanRequest.isCleanObjects()) {
+        if (cleanRequest.isCleanObjects()) {
             purgeObjects();
         }
-        if(cleanRequest.isCleanConnections()) {
+        if (cleanRequest.isCleanConnections()) {
             purgeConnections();
         }
-        if(cleanRequest.isCleanUsers()) {
+        if (cleanRequest.isCleanUsers()) {
             purgeUsers();
         }
-        if(cleanRequest.isCleanRoles()) {
+        if (cleanRequest.isCleanRoles()) {
             purgeRoles();
         }
     }
