@@ -6,6 +6,10 @@ public final class CleanRequest {
     private final boolean cleanUsers;
     private final boolean cleanRoles;
 
+    public static CleanRequestBuilder builder() {
+        return new CleanRequestBuilder();
+    }
+
     CleanRequest(final boolean cleanObjects, final boolean cleanConnections, final boolean cleanUsers, final boolean cleanRoles) {
         this.cleanObjects = cleanObjects;
         this.cleanConnections = cleanConnections;

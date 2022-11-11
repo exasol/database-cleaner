@@ -6,6 +6,9 @@ public class CleanRequestBuilder {
     private boolean cleanUsers = true;
     private boolean cleanRoles = true;
 
+    CleanRequestBuilder() {
+    }
+
     public CleanRequestBuilder setCleanObjects(final boolean cleanObjects) {
         this.cleanObjects = cleanObjects;
         return this;
@@ -26,7 +29,7 @@ public class CleanRequestBuilder {
         return this;
     }
 
-    public CleanRequest createCleanRequest() {
+    public CleanRequest build() {
         return new CleanRequest(cleanObjects, cleanConnections, cleanUsers, cleanRoles);
     }
 }
