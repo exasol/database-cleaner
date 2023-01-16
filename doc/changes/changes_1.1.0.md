@@ -8,7 +8,7 @@ Updated dependencies to use artifacts from Maven Central as repository `maven.ex
 
 ## Features
 
-* ISSUE_NUMBER: description
+* #9: Updated dependencies
 
 ## Dependency Updates
 
