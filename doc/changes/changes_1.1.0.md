@@ -1,6 +1,6 @@
 # Database Cleaner 1.1.0, released 2023-01-16
 
-Code name: Dependency Upgrade
+Code name: Dependency Upgrade on top of 1.0.2
 
 ## Summary
 
