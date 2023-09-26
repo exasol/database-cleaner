@@ -12,6 +12,17 @@ This release fixes CVE-2023-42503 in `org.apache.commons:commons-compress` by up
 
 ## Dependency Updates
 
+### Runtime Dependency Updates
+
+* Updated `com.exasol:exasol-jdbc:7.1.17` to `7.1.20`
+
+### Test Dependency Updates
+
+* Updated `com.exasol:exasol-testcontainers:6.4.1` to `6.6.2`
+* Updated `org.junit.jupiter:junit-jupiter-api:5.9.2` to `5.10.0`
+* Added `org.slf4j:slf4j-jdk14:2.0.9`
+* Updated `org.testcontainers:junit-jupiter:1.17.6` to `1.19.0`
+
 ### Plugin Dependency Updates
 
 * Updated `com.exasol:error-code-crawler-maven-plugin:1.2.1` to `1.3.0`
