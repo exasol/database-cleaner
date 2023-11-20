@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.exasol</groupId>
     <artifactId>database-cleaner</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <name>database-cleaner</name>
     <description>Tool that deletes all objects in an Exasol database</description>
     <url>https://github.com/exasol/database-cleaner/</url>
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.exasol</groupId>
             <artifactId>exasol-testcontainers</artifactId>
-            <version>6.6.2</version>
+            <version>6.6.3</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>1.19.0</version>
+            <version>1.19.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.10.0</version>
+            <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -57,7 +57,7 @@
             <plugin>
                 <groupId>com.exasol</groupId>
                 <artifactId>project-keeper-maven-plugin</artifactId>
-                <version>2.9.12</version>
+                <version>2.9.16</version>
                 <executions>
                     <execution>
                         <goals>
@@ -71,7 +71,7 @@
     <parent>
         <artifactId>database-cleaner-generated-parent</artifactId>
         <groupId>com.exasol</groupId>
-        <version>1.1.1</version>
+        <version>1.1.2</version>
         <relativePath>pk_generated_parent.pom</relativePath>
     </parent>
 </project>
