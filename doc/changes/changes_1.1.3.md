@@ -1,12 +1,10 @@
-# Database Cleaner 1.1.3, released 2024-??-??
+# Database Cleaner 1.1.3, released 2024-03-04
 
 Code name: Fix CVE-2024-25710 and CVE-2024-26308 in test dependency `org.apache.commons:commons-compress`
 
 ## Summary
 
 This release fixes vulnerabilities CVE-2024-25710 and CVE-2024-26308 in test dependency `org.apache.commons:commons-compress`.
-
-**Excluded Vulnerability** We accept vulnerability CVE-2017-10355 (CWE-833: Deadlock) in test dependency `xerces:xercesImpl:jar:2.12.2` as we assume that we only connect to the known endpoint ExaOperations.
 
 ## Security
 
