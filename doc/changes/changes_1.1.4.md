@@ -10,6 +10,18 @@ Code name:
 
 ## Dependency Updates
 
+### Runtime Dependency Updates
+
+* Updated `com.exasol:exasol-jdbc:7.1.20` to `25.2.3`
+
+### Test Dependency Updates
+
+* Updated `com.exasol:exasol-testcontainers:7.0.1` to `7.1.5`
+* Updated `org.hamcrest:hamcrest:2.2` to `3.0`
+* Updated `org.junit.jupiter:junit-jupiter-api:5.10.2` to `5.13.0`
+* Updated `org.slf4j:slf4j-jdk14:2.0.12` to `2.0.17`
+* Updated `org.testcontainers:junit-jupiter:1.19.6` to `1.21.1`
+
 ### Plugin Dependency Updates
 
 * Updated `com.exasol:error-code-crawler-maven-plugin:2.0.0` to `2.0.3`

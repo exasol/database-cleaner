@@ -7,15 +7,15 @@
 | ---------------------------------------------- | -------------------------------- |
 | [Test containers for Exasol on Docker][0]      | [MIT License][1]                 |
 | [Testcontainers :: JUnit Jupiter Extension][2] | [MIT][3]                         |
-| [Hamcrest][4]                                  | [BSD License 3][5]               |
+| [Hamcrest][4]                                  | [BSD-3-Clause][5]                |
 | [JUnit Jupiter API][6]                         | [Eclipse Public License v2.0][7] |
-| [SLF4J JDK14 Provider][8]                      | [MIT License][9]                 |
+| [SLF4J JDK14 Provider][8]                      | [MIT][9]                         |
 
 ## Runtime Dependencies
 
-| Dependency                    | License                 |
-| ----------------------------- | ----------------------- |
-| [EXASolution JDBC Driver][10] | [EXAClient License][11] |
+| Dependency               | License                 |
+| ------------------------ | ----------------------- |
+| [Exasol JDBC Driver][10] | [EXAClient License][11] |
 
 ## Plugin Dependencies
 
@@ -52,13 +52,13 @@
 [2]: https://java.testcontainers.org
 [3]: http://opensource.org/licenses/MIT
 [4]: http://hamcrest.org/JavaHamcrest/
-[5]: http://opensource.org/licenses/BSD-3-Clause
+[5]: https://raw.githubusercontent.com/hamcrest/JavaHamcrest/master/LICENSE
 [6]: https://junit.org/junit5/
 [7]: https://www.eclipse.org/legal/epl-v20.html
 [8]: http://www.slf4j.org
-[9]: http://www.opensource.org/licenses/mit-license.php
-[10]: http://www.exasol.com
-[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/7.1.20/exasol-jdbc-7.1.20-license.txt
+[9]: https://opensource.org/license/mit
+[10]: http://www.exasol.com/
+[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/25.2.3/exasol-jdbc-25.2.3-license.txt
 [12]: https://maven.apache.org/plugins/maven-clean-plugin/
 [13]: https://www.apache.org/licenses/LICENSE-2.0.txt
 [14]: https://maven.apache.org/plugins/maven-install-plugin/
