@@ -1,8 +1,13 @@
-# Database Cleaner 1.1.4, released 2025-??-??
+# Database Cleaner 1.1.4, released 2025-06-02
 
-Code name:
+Code name: Security updates
 
 ## Summary
+
+This release is a security update. We updated the dependencies of the project to fix transitive security issues.
+
+We also added an exception for the OSSIndex for CVE-2024-55551, which is a false positive in Exasol's JDBC driver.
+This issue has been fixed quite a while back now, but the OSSIndex unfortunately does not contain the fix version of 24.2.1 (2024-12-10) set.
 
 ## Features
 
