@@ -29,7 +29,7 @@
 | [Apache Maven Toolchains Plugin][19]                    | [Apache-2.0][13]                            |
 | [Apache Maven Compiler Plugin][20]                      | [Apache-2.0][13]                            |
 | [Apache Maven Enforcer Plugin][21]                      | [Apache-2.0][13]                            |
-| [Maven Flatten Plugin][22]                              | [Apache Software Licenese][13]              |
+| [Maven Flatten Plugin][22]                              | [Apache Software License][13]               |
 | [org.sonatype.ossindex.maven:ossindex-maven-plugin][23] | [ASL2][24]                                  |
 | [Maven Surefire Plugin][25]                             | [Apache-2.0][13]                            |
 | [Versions Maven Plugin][26]                             | [Apache License, Version 2.0][13]           |
@@ -53,12 +53,12 @@
 [3]: http://opensource.org/licenses/MIT
 [4]: http://hamcrest.org/JavaHamcrest/
 [5]: https://raw.githubusercontent.com/hamcrest/JavaHamcrest/master/LICENSE
-[6]: https://junit.org/junit5/
+[6]: https://junit.org/
 [7]: https://www.eclipse.org/legal/epl-v20.html
 [8]: http://www.slf4j.org
 [9]: https://opensource.org/license/mit
-[10]: http://www.exasol.com/
-[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/25.2.3/exasol-jdbc-25.2.3-license.txt
+[10]: https://www.exasol.com/
+[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/25.2.5/exasol-jdbc-25.2.5-license.txt
 [12]: https://maven.apache.org/plugins/maven-clean-plugin/
 [13]: https://www.apache.org/licenses/LICENSE-2.0.txt
 [14]: https://maven.apache.org/plugins/maven-install-plugin/
