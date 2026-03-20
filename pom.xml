@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.exasol</groupId>
     <artifactId>database-cleaner</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <name>database-cleaner</name>
     <description>Tool that deletes all objects in an Exasol database</description>
     <url>https://github.com/exasol/database-cleaner/</url>
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.exasol</groupId>
             <artifactId>exasol-testcontainers</artifactId>
-            <version>7.2.0</version>
+            <version>7.2.2</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -68,7 +68,7 @@
             <plugin>
                 <groupId>com.exasol</groupId>
                 <artifactId>project-keeper-maven-plugin</artifactId>
-                <version>5.4.3</version>
+                <version>5.4.6</version>
                 <executions>
                     <execution>
                         <goals>
@@ -82,7 +82,7 @@
     <parent>
         <artifactId>database-cleaner-generated-parent</artifactId>
         <groupId>com.exasol</groupId>
-        <version>1.1.6</version>
+        <version>1.1.7</version>
         <relativePath>pk_generated_parent.pom</relativePath>
     </parent>
 </project>

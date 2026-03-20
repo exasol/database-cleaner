@@ -85,6 +85,13 @@ class ExasolDatabaseCleanerIT {
         assertDoesNotThrow(() -> createFunction("S1"));
     }
 
+    @Test
+    void testPurgeSchemaOwnedByDifferentUser() throws SQLException {
+        createDbaUserWithSchemaAndTable();
+        cleaner.cleanDatabase();
+        assertDoesNotThrow(this::createDbaUserWithSchemaAndTable);
+    }
+
     private void createFunction(final String schemaName) throws SQLException {
         statement.executeUpdate("CREATE SCHEMA " + schemaName + ";");
         statement.executeUpdate("CREATE FUNCTION " + schemaName
@@ -110,4 +117,17 @@ class ExasolDatabaseCleanerIT {
     private void createConnection() throws SQLException {
         statement.executeUpdate("CREATE CONNECTION exa_connection TO '192.168.6.11:8563';");
     }
+
+    private void createDbaUserWithSchemaAndTable() throws SQLException {
+        statement.executeUpdate("CREATE USER other_user IDENTIFIED BY \"h12_xhz\"");
+        statement.executeUpdate("GRANT DBA TO other_user");
+        try (Statement otherStatement =
+                     CONTAINER.createConnectionForUser("other_user", "h12_xhz")
+                             .createStatement()) {
+            otherStatement.executeUpdate("CREATE SCHEMA OTHER_SCHEMA;");
+            otherStatement.executeUpdate(
+                    "CREATE TABLE OTHER_SCHEMA.T1 (ID INT);");
+        }
+    }
+
 }
