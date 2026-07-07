@@ -58,7 +58,7 @@
 [8]: http://www.slf4j.org
 [9]: https://opensource.org/license/mit
 [10]: https://www.exasol.com/
-[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/25.2.5/exasol-jdbc-25.2.5-license.txt
+[11]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/26.2.8/exasol-jdbc-26.2.8-license.txt
 [12]: https://maven.apache.org/plugins/maven-clean-plugin/
 [13]: https://www.apache.org/licenses/LICENSE-2.0.txt
 [14]: https://maven.apache.org/plugins/maven-install-plugin/
