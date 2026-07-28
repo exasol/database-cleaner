@@ -6,16 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.junit.jupiter.api.*;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import com.exasol.containers.ExasolContainer;
 
-@Testcontainers
 class ExasolDatabaseCleanerIT {
 
-    @Container
-    @SuppressWarnings("resource") // Will be closed by @Container annotation
+    @SuppressWarnings("resource") // Will be closed in stopContainer()
     private static final ExasolContainer<? extends ExasolContainer<?>> CONTAINER = new ExasolContainer<>()
             .withReuse(true);
     private static Statement statement;
@@ -23,9 +19,16 @@ class ExasolDatabaseCleanerIT {
 
     @BeforeAll
     static void beforeAll() throws SQLException {
+        CONTAINER.start();
         statement = CONTAINER.createConnectionForUser(CONTAINER.getUsername(), CONTAINER.getPassword())
                 .createStatement();
         cleaner = new ExasolDatabaseCleaner(statement);
+    }
+
+    @AfterAll
+    static void stopContainer() throws SQLException {
+        statement.close();
+        CONTAINER.stop();
     }
 
     @AfterEach
@@ -85,6 +88,13 @@ class ExasolDatabaseCleanerIT {
         assertDoesNotThrow(() -> createFunction("S1"));
     }
 
+    @Test
+    void testPurgeSchemaOwnedByDifferentUser() throws SQLException {
+        createDbaUserWithSchemaAndTable();
+        cleaner.cleanDatabase();
+        assertDoesNotThrow(this::createDbaUserWithSchemaAndTable);
+    }
+
     private void createFunction(final String schemaName) throws SQLException {
         statement.executeUpdate("CREATE SCHEMA " + schemaName + ";");
         statement.executeUpdate("CREATE FUNCTION " + schemaName
@@ -109,5 +119,16 @@ class ExasolDatabaseCleanerIT {
 
     private void createConnection() throws SQLException {
         statement.executeUpdate("CREATE CONNECTION exa_connection TO '192.168.6.11:8563';");
+    }
+
+    private void createDbaUserWithSchemaAndTable() throws SQLException {
+        statement.executeUpdate("CREATE USER other_user IDENTIFIED BY \"h12_xhz\"");
+        statement.executeUpdate("GRANT DBA TO other_user");
+        try (Statement otherStatement = CONTAINER.createConnectionForUser("other_user", "h12_xhz")
+                .createStatement()) {
+            otherStatement.executeUpdate("CREATE SCHEMA OTHER_SCHEMA;");
+            otherStatement.executeUpdate(
+                    "CREATE TABLE OTHER_SCHEMA.T1 (ID INT);");
+        }
     }
 }
