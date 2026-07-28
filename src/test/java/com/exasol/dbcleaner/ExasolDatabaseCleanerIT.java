@@ -6,16 +6,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import org.junit.jupiter.api.*;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import com.exasol.containers.ExasolContainer;
 
-@Testcontainers
 class ExasolDatabaseCleanerIT {
 
-    @Container
-    @SuppressWarnings("resource") // Will be closed by @Container annotation
+    @SuppressWarnings("resource") // Will be closed in stopContainer()
     private static final ExasolContainer<? extends ExasolContainer<?>> CONTAINER = new ExasolContainer<>()
             .withReuse(true);
     private static Statement statement;
@@ -23,9 +19,16 @@ class ExasolDatabaseCleanerIT {
 
     @BeforeAll
     static void beforeAll() throws SQLException {
+        CONTAINER.start();
         statement = CONTAINER.createConnectionForUser(CONTAINER.getUsername(), CONTAINER.getPassword())
                 .createStatement();
         cleaner = new ExasolDatabaseCleaner(statement);
+    }
+
+    @AfterAll
+    static void stopContainer() throws SQLException {
+        statement.close();
+        CONTAINER.stop();
     }
 
     @AfterEach
