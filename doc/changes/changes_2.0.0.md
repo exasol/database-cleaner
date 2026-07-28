@@ -20,6 +20,10 @@ In Eclipse Parsson published Maven Central artifacts before version 1.1.8, the J
 
 * #26: Fixed vulnerability CVE-2026-9563 in dependency `org.eclipse.parsson:parsson:jar:1.1.7:test`
 
+## Bugfixes
+
+* #20: Fixed purging database when user owns a schema
+
 ## Dependency Updates
 
 ### Runtime Dependency Updates
