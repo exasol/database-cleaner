@@ -56,7 +56,7 @@
 [6]: http://www.slf4j.org
 [7]: https://opensource.org/license/mit
 [8]: https://www.exasol.com/
-[9]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/26.2.8/exasol-jdbc-26.2.8-license.txt
+[9]: https://repo1.maven.org/maven2/com/exasol/exasol-jdbc/26.2.9/exasol-jdbc-26.2.9-license.txt
 [10]: https://docs.sonarsource.com/sonarqube-server/latest/extension-guide/developing-a-plugin/plugin-basics/sonar-scanner-maven/sonar-maven-plugin/
 [11]: http://www.gnu.org/licenses/lgpl.txt
 [12]: https://maven.apache.org/plugins/maven-toolchains-plugin/
